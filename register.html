@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+	  <center>
+	  <h1 style="color:red"> User Registration Form</h1>
+	  <form class="col-5" th:actio="@{registerUser}" th:object="${user}">
+		  <div class="mb-3">
+			   
+		  </div>
+		  
+		  
+	  </form>
+	  
+
+  <label for="name"><b>Name</b></label><br>
+  <input type="text" th:field="*{name}" id="name" name="name" placeholder="Enter name"><br><br>
+  
+  <label for="username"><b>Username</b></label><br>
+  <input type="text" th:field="*{username}" id="username" name="username" placeholder="Enter Username"><br><br>
+  
+  <label for="email"><b>Email</b></label><br>
+  <input type="text" th:field="*{email}" id="email" name="email" placeholder="Enter email"><br><br>
+  
+  <label for="phone"><b>Phone</b></label><br>
+  <input type="text" th:field="*{phone}" id="phone" name="phone" placeholder="Enter Phone"><br><br>
+  
+  <label for="password"><b>Password</b></label><br>
+  <input type="text" th:field="*{password}" id="password" name="password" placeholder="Enter password"><br><br>
+  
+  <label for="confirm_password"><b>Confirm Password</b></label><br>
+  <input type="text" th:field="*{password}" id="password" name="password" placeholder="Enter Confirm Password"><br><br>
+  
+  <label for="gender"><b>Gender</b></label><br>
+  <input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female<br><br>
+
+</form>
+	<button type="submit" class="btn btn-success">Register</button>
+</center>
+	  
+	  
+  </body>
+</html>
